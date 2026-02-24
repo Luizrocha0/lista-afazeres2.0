@@ -22,7 +22,7 @@ export default function Admin(){
 
                 const tarefaRef= collection(db,"tarefas")
                 const q = query(tarefaRef, orderBy("created", "desc"), where("userUid", "==", data?.uid))
-                const unsub = onSnapshot(q, (snapshot)=>{
+                onSnapshot(q, (snapshot)=>{
                     let lista=[];
                     
                     snapshot.forEach((doc)=>{
