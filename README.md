@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Lista de Afazeres 2.0 📝
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse é como a lista de afazeres que fiz anteriormente, mas agora mais complexo utilizando o Firebase como banco de dados e sistema de autenticação. A ideia principal desta versão foi evoluir a aplicação, trazendo dados persistentes na nuvem e proteção de rotas para garantir que cada usuário tenha acesso apenas às suas próprias tarefas.
 
-## Available Scripts
+## 🚀 Funcionalidades
 
-In the project directory, you can run:
+* **Autenticação de Usuários:** Sistema de cadastro e login integrado com o Firebase Authentication.
+* **Rotas Privadas:** O painel de tarefas (`/admin`) só pode ser acessado por usuários que estejam devidamente logados no sistema.
+* **Gerenciamento de Tarefas (CRUD):** * Criar novas tarefas exclusivas para a conta logada.
+  * Listar tarefas em tempo real buscando diretamente do banco.
+  * Excluir ou marcar tarefas como concluídas.
+* **Armazenamento em Nuvem:** Uso do Firebase Firestore para salvar e recuperar os dados de forma rápida e segura.
 
-### `npm start`
+## 🛠️ Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **React.js:** Para a construção da interface de usuário e componentização.
+* **React Router DOM:** Para o gerenciamento de rotas e navegação da SPA (Single Page Application).
+* **Firebase:** * *Authentication* para o gerenciamento de acesso e contas.
+  * *Cloud Firestore* como banco de dados NoSQL em tempo real.
+* **CSS:** Estilização própria das páginas e componentes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ Como executar o projeto na sua máquina
 
-### `npm test`
+1. Clone o repositório:
+```bash
+git clone [https://github.com/luizrocha0/lista-afazeres2.0.git](https://github.com/luizrocha0/lista-afazeres2.0.git)
+Acesse a pasta do projeto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Bash
+cd lista-afazeres2.0
+Instale as dependências:
 
-### `npm run build`
+Bash
+npm install
+Configure o Firebase:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Crie um projeto no Firebase.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ative os serviços de Authentication (provedor de E-mail/Senha) e Firestore Database.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Adicione as suas chaves de configuração do Firebase no arquivo src/firebaseConnection.js.
 
-### `npm run eject`
+Inicie a aplicação:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Bash
+npm start
+O aplicativo abrirá automaticamente no seu navegador no endereço http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👨‍💻 Autor
+Luiz Henrique Rocha
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para usar, basta copiar o código acima e colar no arquivo `README.md` que já está na raiz
